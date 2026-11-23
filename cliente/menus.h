@@ -8,4 +8,8 @@ int pantalla_inicio(void);
 int menu_opciones(const char *titulo, const char *subtitulo,
                   const char *const opciones[], int n);
 
+/* Igual que menu_opciones, pero empieza con la opcion "inicial" marcada */
+int menu_opciones_desde(const char *titulo, const char *subtitulo,
+                        const char *const opciones[], int n, int inicial);
+
 #endif

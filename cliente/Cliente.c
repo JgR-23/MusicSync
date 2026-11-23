@@ -7,6 +7,8 @@
 #include "ipc_util.h"
 #include "menus.h"
 #include "playlists.h"
+#include "ui_carrito.h"
+#include "ui_perfil.h"
 #include "sesion_ui.h"
 #include "ui_biblioteca.h"
 
@@ -91,6 +93,23 @@ static void agregar_a_playlist(const CancionUI *cancion)
     mostrar_aviso(com_msg->mensaje, r == RESP_OK ? PAR_EXITO : PAR_ERROR);
 }
 
+/* ENTER sobre una cancion de la biblioteca: elegir que hacer con ella */
+static void accion_cancion(const CancionUI *cancion)
+{
+    static const char *const opciones[] = {
+        "Agregar a una playlist",
+        "Agregar al carrito",
+        "Cancelar"
+    };
+    int eleccion = menu_opciones("Cancion", cancion->titulo, opciones, 3);
+
+    if (eleccion == 0) {
+        agregar_a_playlist(cancion);
+    } else if (eleccion == 1) {
+        agregar_al_carrito(cancion->id);
+    }
+}
+
 static void abrir_biblioteca(void)
 {
     CancionUI catalogo[MAX_CANCIONES];
@@ -111,7 +130,7 @@ static void abrir_biblioteca(void)
         mostrar_aviso("La biblioteca esta vacia.", PAR_ERROR);
         return;
     }
-    pantalla_biblioteca(catalogo, total, agregar_a_playlist);
+    pantalla_biblioteca(catalogo, total, accion_cancion);
 }
 
 /* ------------------------------------------------------------------ */
@@ -190,14 +209,21 @@ static void menu_principal(const char *usuario)
     static const char *const opciones[] = {
         "Biblioteca",
         "Playlists",
+        "Carrito de compras",
+        "Mi perfil",
         "Cerrar sesion"
     };
     char subtitulo[LON_USUARIO + 16];
+    int ultima = 0;
 
     snprintf(subtitulo, sizeof(subtitulo), "Usuario: %s", usuario);
 
     while (!com_perdida()) {
-        int opcion = menu_opciones("Menu principal", subtitulo, opciones, 3);
+        int opcion = menu_opciones_desde("Menu principal", subtitulo, opciones, 5, ultima);
+
+        if (opcion >= 0) {
+            ultima = opcion;
+        }
 
         if (com_perdida()) {
             return;
@@ -206,7 +232,11 @@ static void menu_principal(const char *usuario)
             abrir_biblioteca();
         } else if (opcion == 1) {
             mostrar_playlists();
-        } else if (opcion == 2 || opcion == -1) {
+        } else if (opcion == 2) {
+            mostrar_carrito();
+        } else if (opcion == 3) {
+            mostrar_perfil();
+        } else if (opcion == 4 || opcion == -1) {
             if (confirmar("Cerrar sesion?")) {
                 com_preparar(ACC_CERRAR_SESION);
                 com_transaccion();

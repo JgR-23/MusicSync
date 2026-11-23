@@ -156,3 +156,120 @@
 [03:09:32] [PID 10759] Cliente desconectado
 [03:09:41] Cerrando servidor...
 [03:09:42] Memoria compartida y semaforos eliminados. Adios.
+[17:15:33] Servidor listo (PID 155510). Esperando clientes... (Ctrl+C para salir)
+[17:15:46] [PID 155694] Cliente conectado (hilo atendiendolo)
+[17:15:59] [PID 155886] Cliente conectado (hilo atendiendolo)
+[17:16:41] [PID 155886] Solicita LOGIN_ADMIN (sin sesion)
+[17:16:41] [PID 155886] Resultado OK: Bienvenido administrador
+[17:16:44] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:16:44] [PID 155886] Resultado OK: OK
+[17:17:03] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:17:03] [PID 155886] Resultado OK: OK
+[17:17:06] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:17:06] [PID 155886] Resultado OK: OK
+[17:17:10] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:17:10] [PID 155886] Resultado OK: OK
+[17:17:18] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:17:18] [PID 155886] Resultado OK: OK
+[17:19:05] [PID 155694] Solicita REGISTRO (usuario 'jesus')
+[17:19:05] [PID 155694] Resultado OK: Cuenta creada correctamente
+[17:19:19] [PID 155694] Solicita LOGIN (usuario 'jesus')
+[17:19:19] [PID 155694] Resultado OK: Bienvenido
+[17:19:23] [PID 155694] Solicita VER_BIBLIOTECA (usuario 'jesus')
+[17:19:23] [PID 155694] Resultado OK: OK
+[17:19:32] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:19:32] [PID 155694] Resultado OK: OK
+[17:19:37] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:19:37] [PID 155694] Resultado OK: OK
+[17:19:40] [PID 155694] Solicita CREAR_PLAYLIST (usuario 'jesus')
+[17:19:40] [PID 155694] Resultado OK: Playlist creada
+[17:19:41] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:19:41] [PID 155694] Resultado OK: OK
+[17:19:45] [PID 155694] Solicita VER_BIBLIOTECA (usuario 'jesus')
+[17:19:45] [PID 155694] Resultado OK: OK
+[17:19:49] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:19:49] [PID 155694] Resultado OK: OK
+[17:19:50] [PID 155694] Solicita AGREGAR_A_PLAYLIST (usuario 'jesus')
+[17:19:50] [PID 155694] Resultado OK: Cancion agregada a la playlist
+[17:21:17] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:21:17] [PID 155694] Resultado OK: OK
+[17:21:18] [PID 155694] Solicita VER_CANCIONES_PLAYLIST (usuario 'jesus')
+[17:21:18] [PID 155694] Resultado OK: OK
+[17:21:28] [PID 155694] Solicita VER_BIBLIOTECA (usuario 'jesus')
+[17:21:28] [PID 155694] Resultado OK: OK
+[17:22:01] [PID 155694] Solicita AGREGAR_AL_CARRITO (usuario 'jesus')
+[17:22:01] [PID 155694] Resultado OK: Cancion agregada al carrito
+[17:22:06] [PID 155694] Solicita VER_CARRITO (usuario 'jesus')
+[17:22:06] [PID 155694] Resultado OK: OK
+[17:22:50] [PID 155694] Solicita COMPRAR (usuario 'jesus')
+[17:22:50] [PID 155694] Resultado OK: Compra realizada: 1 canciones, total $12.50
+[17:22:52] [PID 155694] Solicita VER_CARRITO (usuario 'jesus')
+[17:22:52] [PID 155694] Resultado OK: OK
+[17:23:01] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:23:01] [PID 155694] Resultado OK: OK
+[17:23:03] [PID 155694] Solicita VER_CANCIONES_PLAYLIST (usuario 'jesus')
+[17:23:03] [PID 155694] Resultado OK: OK
+[17:23:06] [PID 155694] Solicita VER_CANCIONES_PLAYLIST (usuario 'jesus')
+[17:23:06] [PID 155694] Resultado OK: OK
+[17:26:04] [PID 155694] Solicita VER_BIBLIOTECA (usuario 'jesus')
+[17:26:04] [PID 155694] Resultado OK: OK
+[17:28:59] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:28:59] [PID 155886] Resultado OK: OK
+[17:29:02] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:29:02] [PID 155886] Resultado OK: OK
+[17:29:03] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:29:03] [PID 155886] Resultado OK: OK
+[17:29:07] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:29:07] [PID 155886] Resultado OK: OK
+[17:29:14] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:29:14] [PID 155886] Resultado OK: OK
+[17:29:19] [PID 155886] Solicita ADMIN_ELIMINAR_USUARIO (usuario 'admin')
+[17:29:19] [PID 155886] Resultado OK: Usuario eliminado correctamente
+[17:29:26] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:29:26] [PID 155694] Resultado OK: OK
+[17:29:30] [PID 155694] Solicita VER_BIBLIOTECA (usuario 'jesus')
+[17:29:30] [PID 155694] Resultado OK: OK
+[17:29:33] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:29:33] [PID 155694] Resultado OK: OK
+[17:29:37] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:29:37] [PID 155694] Resultado OK: OK
+[17:29:40] [PID 155694] Solicita CREAR_PLAYLIST (usuario 'jesus')
+[17:29:40] [PID 155694] Resultado OK: Playlist creada
+[17:29:41] [PID 155694] Solicita VER_PLAYLISTS (usuario 'jesus')
+[17:29:41] [PID 155694] Resultado OK: OK
+[17:29:57] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:29:57] [PID 155886] Resultado OK: OK
+[17:30:05] [PID 155886] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[17:30:05] [PID 155886] Resultado OK: OK
+[17:30:26] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:26] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:31] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:31] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:35] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:35] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:36] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:36] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:36] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:36] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:36] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:36] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:37] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:37] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:30:40] [PID 155694] Solicita VER_PERFIL (usuario 'jesus')
+[17:30:40] [PID 155694] Resultado ERROR: No se encontro tu cuenta
+[17:31:15] [PID 155694] Solicita CERRAR_SESION (usuario 'jesus')
+[17:31:15] [PID 155694] Resultado OK: Sesion cerrada
+[17:31:31] [PID 155694] Solicita LOGIN (usuario 'juan')
+[17:31:31] [PID 155694] Resultado OK: Bienvenido
+[17:31:35] [PID 155694] Solicita VER_PERFIL (usuario 'juan')
+[17:31:35] [PID 155694] Resultado OK: OK
+[17:32:22] [PID 155694] Solicita MODIFICAR_PERFIL (usuario 'juan')
+[17:32:22] [PID 155694] Resultado OK: Datos actualizados correctamente
+[17:32:23] [PID 155694] Solicita VER_PERFIL (usuario 'juan')
+[17:32:23] [PID 155694] Resultado OK: OK
+[17:32:32] [PID 155694] Solicita VER_PERFIL (usuario 'juan')
+[17:32:32] [PID 155694] Resultado OK: OK
+[17:32:35] [PID 155694] Solicita CERRAR_SESION (usuario 'juan')
+[17:32:35] [PID 155694] Resultado OK: Sesion cerrada
+[17:33:36] Cerrando servidor...
+[17:33:37] Memoria compartida y semaforos eliminados. Adios.

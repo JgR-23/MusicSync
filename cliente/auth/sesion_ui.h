@@ -12,6 +12,9 @@ int pantalla_login(char *usuario, char *contrasena);
 /* correo: >= 64 bytes */
 int pantalla_registro(char *usuario, char *correo, char *contrasena);
 
+/* Login del administrador: solo contrasena. 1 = enviado, 0 = volvio */
+int pantalla_login_admin(char *contrasena);
+
 int validarCorreo(const char *correo);
 int validarContrasenaSegura(const char *pass);
 

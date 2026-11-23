@@ -10,10 +10,13 @@
 #include <sys/sem.h>
 #include <sys/stat.h>
 
+#include "admin_srv.h"
 #include "biblioteca.h"
+#include "carrito_srv.h"
 #include "ipc_util.h"
 #include "log.h"
 #include "playlists_srv.h"
+#include "reportes.h"
 #include "protocolo.h"
 #include "sesion.h"
 #include "usuarios.h"
@@ -61,6 +64,7 @@ static void preparar_datos(void)
     asegurar_archivo(RUTA_LLAVE);
     asegurar_archivo("datos/usuarios.txt");
     asegurar_archivo("datos/canciones.txt");
+    asegurar_archivo("datos/ventas.txt");
 }
 
 /* ------------------------------------------------------------------ */
@@ -75,9 +79,12 @@ static void despachar(Mensaje *m, Sesion *s, pid_t pid)
     m->usuario[LON_USUARIO - 1] = '\0';
     m->correo[LON_CORREO - 1] = '\0';
     m->hash[LON_HASH - 1] = '\0';
+    m->hash_nuevo[LON_HASH - 1] = '\0';
     m->texto[LON_NOMBRE - 1] = '\0';
+    m->entrada[LON_ENTRADA - 1] = '\0';
 
-    if (m->accion == ACC_LOGIN || m->accion == ACC_REGISTRO) {
+    if (m->accion == ACC_LOGIN || m->accion == ACC_REGISTRO ||
+        m->accion == ACC_ADM_CREAR_USUARIO) {
         snprintf(quien, sizeof(quien), "usuario '%s'", m->usuario);
     } else if (s->logueado) {
         snprintf(quien, sizeof(quien), "usuario '%s'", s->usuario);
@@ -102,6 +109,25 @@ static void despachar(Mensaje *m, Sesion *s, pid_t pid)
         case ACC_VER_CANCIONES_PL:  srv_ver_canciones_pl(m, s);   break;
         case ACC_AGREGAR_A_PL:      srv_agregar_a_pl(m, s);       break;
         case ACC_QUITAR_DE_PL:      srv_quitar_de_pl(m, s);       break;
+
+        case ACC_LOGIN_ADMIN:       srv_login_admin(m, s);        break;
+        case ACC_VER_PERFIL:        srv_ver_perfil(m, s);         break;
+        case ACC_MODIFICAR_PERFIL:  srv_modificar_perfil(m, s);   break;
+
+        case ACC_VER_CARRITO:       srv_ver_carrito(m, s);        break;
+        case ACC_AGREGAR_CARRITO:   srv_agregar_carrito(m, s);    break;
+        case ACC_QUITAR_CARRITO:    srv_quitar_carrito(m, s);     break;
+        case ACC_VACIAR_CARRITO:    srv_vaciar_carrito(m, s);     break;
+        case ACC_COMPRAR:           srv_comprar(m, s);            break;
+
+        case ACC_ADM_VER_USUARIOS:      srv_adm_ver_usuarios(m, s);      break;
+        case ACC_ADM_CREAR_USUARIO:     srv_adm_crear_usuario(m, s);     break;
+        case ACC_ADM_MODIFICAR_USUARIO: srv_adm_modificar_usuario(m, s); break;
+        case ACC_ADM_ELIMINAR_USUARIO:  srv_adm_eliminar_usuario(m, s);  break;
+        case ACC_ADM_AGREGAR_CANCION:   srv_adm_agregar_cancion(m, s);   break;
+        case ACC_ADM_MODIFICAR_CANCION: srv_adm_modificar_cancion(m, s); break;
+        case ACC_ADM_ELIMINAR_CANCION:  srv_adm_eliminar_cancion(m, s);  break;
+        case ACC_ADM_REPORTE:           srv_reporte(m, s);               break;
         default:
             m->codigo = RESP_ERROR;
             copiar_cadena(m->mensaje, sizeof(m->mensaje), "Accion desconocida");

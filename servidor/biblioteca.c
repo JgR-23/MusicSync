@@ -71,3 +71,40 @@ void srv_biblioteca(Mensaje *m, const Sesion *s)
 
     resp_ok(m, "OK");
 }
+
+int biblioteca_cargar(CancionSrv *lista, int max)
+{
+    FILE *archivo = fopen(ARCH_CANCIONES, "r");
+    char linea[512];
+    CancionSrv c;
+    int n = 0;
+
+    if (archivo == NULL) {
+        return 0;
+    }
+    while (n < max && fgets(linea, sizeof(linea), archivo)) {
+        if (leer_linea(linea, &c)) {
+            lista[n++] = c;
+        }
+    }
+    fclose(archivo);
+    return n;
+}
+
+int biblioteca_guardar(const CancionSrv *lista, int n)
+{
+    FILE *archivo = fopen(ARCH_CANCIONES, "w");
+    int i;
+
+    if (archivo == NULL) {
+        return -1;
+    }
+    for (i = 0; i < n; i++) {
+        fprintf(archivo, "%d;%s;%s;%s;%s;%s;%.2f\n",
+                lista[i].id, lista[i].titulo, lista[i].artista,
+                lista[i].album, lista[i].genero, lista[i].duracion,
+                lista[i].precio);
+    }
+    fclose(archivo);
+    return 0;
+}

@@ -17,6 +17,8 @@ typedef struct {
 } CancionSrv;
 
 int  biblioteca_buscar(int id, CancionSrv *salida);   /* 1 = encontrada */
+int  biblioteca_cargar(CancionSrv *lista, int max);   /* devuelve cuantas leyo */
+int  biblioteca_guardar(const CancionSrv *lista, int n); /* 0 = ok, -1 = error */
 void srv_biblioteca(Mensaje *m, const Sesion *s);
 
 #endif

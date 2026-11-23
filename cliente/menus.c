@@ -5,9 +5,9 @@
 
 static int menu_core(const char *const banner[], int nb,
                      const char *titulo, const char *subtitulo,
-                     const char *const opciones[], int n)
+                     const char *const opciones[], int n, int inicial)
 {
-    int seleccion = 0;
+    int seleccion = (inicial >= 0 && inicial < n) ? inicial : 0;
     int inicio = 0;
 
     for (;;) {
@@ -103,7 +103,13 @@ static int menu_core(const char *const banner[], int nb,
 int menu_opciones(const char *titulo, const char *subtitulo,
                   const char *const opciones[], int n)
 {
-    return menu_core(NULL, 0, titulo, subtitulo, opciones, n);
+    return menu_core(NULL, 0, titulo, subtitulo, opciones, n, 0);
+}
+
+int menu_opciones_desde(const char *titulo, const char *subtitulo,
+                        const char *const opciones[], int n, int inicial)
+{
+    return menu_core(NULL, 0, titulo, subtitulo, opciones, n, inicial);
 }
 
 int pantalla_inicio(void)
@@ -124,5 +130,5 @@ int pantalla_inicio(void)
         "Salir del sistema"
     };
 
-    return menu_core(banner, 8, "Bienvenido", "Elige una opcion", opciones, 3);
+    return menu_core(banner, 8, "Bienvenido", "Elige una opcion", opciones, 3, 0);
 }
