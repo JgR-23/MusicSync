@@ -1,0 +1,26 @@
+# id|titulo|artista|album|genero|duracion|precio
+1|Bohemian Rhapsody|Queen|A Night at the Opera|Rock|5:55|19.99
+2|Yesterday|The Beatles|Help!|Pop|2:05|12.50
+3|No Quarter|Led Zeppelin|Houses of the Holy|Rock|7:00|15.00
+4|Breathe|Pink Floyd|Dark Side of the Moon|Rock|2:43|14.00
+5|Numb|Linkin Park|Meteora|Nu Metal|3:07|13.50
+6|In the End|Linkin Park|Hybrid Theory|Alternative Rock|3:36|13.50
+7|Smells Like Teen Spirit|Nirvana|Nevermind|Grunge|5:01|14.50
+8|Come As You Are|Nirvana|Nevermind|Grunge|3:39|12.00
+9|Hotel California|Eagles|Hotel California|Rock|6:30|16.00
+10|Stairway to Heaven|Led Zeppelin|Led Zeppelin IV|Rock|8:02|17.50
+11|Billie Jean|Michael Jackson|Thriller|Pop|4:54|15.50
+12|Thriller|Michael Jackson|Thriller|Pop|5:57|15.50
+13|Hey Jude|The Beatles|Hey Jude|Pop|7:11|14.00
+14|Wish You Were Here|Pink Floyd|Wish You Were Here|Rock|5:34|14.50
+15|Back in Black|AC/DC|Back in Black|Hard Rock|4:15|13.00
+16|Enter Sandman|Metallica|Metallica|Heavy Metal|5:31|14.00
+17|Under the Bridge|Red Hot Chili Peppers|Blood Sugar Sex Magik|Rock|4:24|12.50
+18|Clocks|Coldplay|A Rush of Blood to the Head|Alternative Rock|5:07|13.00
+19|Viva la Vida|Coldplay|Viva la Vida or Death and All His Friends|Alternative Rock|4:02|13.00
+20|Lose Yourself|Eminem|8 Mile|Hip Hop|5:26|15.00
+21|Rolling in the Deep|Adele|21|Pop|3:48|12.00
+22|Take Five|Dave Brubeck|Time Out|Jazz|5:24|11.50
+23|Clair de Lune|Claude Debussy|Suite bergamasque|Clasica|5:00|9.50
+24|Gymnopedie No. 1|Erik Satie|Trois Gymnopedies|Clasica|3:05|9.50
+25|De Musica Ligera|Soda Stereo|Cancion Animal|Rock en Espanol|3:32|12.50

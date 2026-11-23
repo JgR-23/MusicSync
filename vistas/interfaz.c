@@ -8,16 +8,7 @@
 /*  Inicializacion                                                    */
 /* ------------------------------------------------------------------ */
 
-void inicializar_interfaz(void){
-    setlocale(LC_ALL, "");  // Soporte de acentos / UTF-8
-
-    initscr();              // Inicializar ncurses
-    cbreak();               // Leer teclas sin esperar Enter
-    noecho();               // No mostrar automaticamente las teclas
-    keypad(stdscr, TRUE);   // Habilitar flechas y otras teclas especiales
-    curs_set(0);            // Ocultar el cursor
-    set_escdelay(25);       // ESC responde rapido
-
+void configurar_colores_interfaz(void){
     if (has_colors()) {
         start_color();
 
@@ -28,6 +19,19 @@ void inicializar_interfaz(void){
         init_pair(PAR_EXITO,     COLOR_GREEN, COLOR_BLACK);
         init_pair(PAR_AYUDA,     COLOR_WHITE, COLOR_BLUE);
     }
+}
+
+void inicializar_interfaz(void){
+    setlocale(LC_ALL, "");  // Soporte de acentos / UTF-8
+
+    initscr();              // Inicializar ncurses
+    cbreak();               // Leer teclas sin esperar Enter
+    noecho();               // No mostrar automaticamente las teclas
+    keypad(stdscr, TRUE);   // Habilitar flechas y otras teclas especiales
+    curs_set(0);            // Ocultar el cursor
+    set_escdelay(25);       // ESC responde rapido
+
+    configurar_colores_interfaz();
 }
 
 void finalizar_interfaz(void){

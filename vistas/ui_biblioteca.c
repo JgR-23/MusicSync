@@ -1,9 +1,78 @@
 #include "ui_biblioteca.h"
 #include "ui_buscar.h"
+#include "ipc_cliente.h"
 
 #include <ncurses.h>
 #include <stdio.h>
 #include <string.h>
+
+/* Muestra las playlists del usuario y agrega la cancion a la que elija */
+static void agregar_a_playlist(const CancionUI *cancion) {
+    RegPlaylist playlists[IPC_MAX_PLAYLISTS];
+    int total = ipc_listar_playlists(playlists, IPC_MAX_PLAYLISTS);
+    int sel = 0;
+    int scroll = 0;
+    char msg[MAX_TEXTO * 2];
+
+    if (total < 0) {
+        mostrar_mensaje_ui(ipc_ultimo_error());
+        return;
+    }
+    if (total == 0) {
+        mostrar_mensaje_ui("No tienes playlists. Crea una en Gestion de playlist.");
+        return;
+    }
+
+    while (1) {
+        int alto, ancho;
+        getmaxyx(stdscr, alto, ancho);
+        erase();
+        box(stdscr, 0, 0);
+
+        mvprintw(1, 2, "Agregar a playlist");
+        mvhline(2, 1, ACS_HLINE, ancho - 2);
+        mvprintw(3, 2, "Cancion: %.*s", ancho - 14 > 0 ? ancho - 14 : 1, cancion->titulo);
+        mvhline(4, 1, ACS_HLINE, ancho - 2);
+
+        int top = 6;
+        int visibles = alto - top - 3;
+        if (visibles < 1) visibles = 1;
+
+        if (sel < scroll) scroll = sel;
+        else if (sel >= scroll + visibles) scroll = sel - visibles + 1;
+
+        for (int i = 0; i < visibles; i++) {
+            int idx = scroll + i;
+            if (idx >= total) break;
+
+            if (idx == sel) attron(A_REVERSE | A_BOLD);
+            mvprintw(top + i, 4, "%-30.30s %2d cancion(es)",
+                     playlists[idx].nombre, playlists[idx].cantidad);
+            if (idx == sel) attroff(A_REVERSE | A_BOLD);
+        }
+
+        mvhline(alto - 2, 1, ACS_HLINE, ancho - 2);
+        mvprintw(alto - 1, 2, "Flechas arriba/abajo | ENTER agregar | ESC cancelar");
+        refresh();
+
+        int ch = getch();
+        if (ch == KEY_UP) {
+            sel = (sel - 1 + total) % total;
+        } else if (ch == KEY_DOWN) {
+            sel = (sel + 1) % total;
+        } else if (ch == '\n' || ch == KEY_ENTER) {
+            if (ipc_agregar_cancion(playlists[sel].nombre, cancion->id) == 0) {
+                snprintf(msg, sizeof(msg), "Cancion agregada a \"%s\".", playlists[sel].nombre);
+                mostrar_mensaje_ui(msg);
+            } else {
+                mostrar_mensaje_ui(ipc_ultimo_error());
+            }
+            return;
+        } else if (ch == TECLA_ESC) {
+            return;
+        }
+    }
+}
 
 void pantalla_biblioteca(const CancionUI *catalogo, int total_catalogo) {
     CancionUI lista[MAX_CANCIONES];
@@ -77,6 +146,9 @@ void pantalla_biblioteca(const CancionUI *catalogo, int total_catalogo) {
                     foco = total > 0 ? 1 : 0;
                     scroll = 0;
                 }
+            } else {
+                /* ENTER sobre una cancion: elegir a que playlist agregarla */
+                agregar_a_playlist(&lista[foco - 1]);
             }
         } else if (ch == TECLA_ESC) {
             return;

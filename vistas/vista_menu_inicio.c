@@ -66,7 +66,7 @@ static void dibujar_menu_inicio(WINDOW *win, int seleccion) {
         wattron(win, COLOR_PAIR(PAR_FONDO));
         mvwprintw(win, fila_pie,     3, "Desplazamiento con flechas hacia arriba y abajo");
         mvwprintw(win, fila_pie + 1, 3, "Presione ENTER para seleccionar");
-        mvwprintw(win, fila_pie + 2, 3, "Presione ESC para salir");
+        mvwprintw(win, fila_pie + 2, 3, "Presione ESC para cerrar sesion");
     }
 
     wrefresh(win);

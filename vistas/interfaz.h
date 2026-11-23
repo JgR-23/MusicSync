@@ -14,6 +14,9 @@
 void inicializar_interfaz(void);
 void finalizar_interfaz(void);
 
+/* Define los pares de color de esta interfaz (hay que reaplicarlos si otra vista los cambia) */
+void configurar_colores_interfaz(void);
+
 /* Mensaje rapido en la parte inferior (no bloquea) */
 void mostrar_mensaje(const char *mensaje);
 

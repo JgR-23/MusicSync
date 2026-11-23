@@ -3,7 +3,8 @@
 #include <string.h>
 
 #include "playlists.h"
-#include "../interfaz/interfaz.h"
+#include "interfaz.h"
+#include "ipc_cliente.h"
 
 #define MAX_PLAYLISTS 20
 #define MAX_NOMBRE 50
@@ -18,6 +19,7 @@ typedef struct{
     char album[80];
     char genero[40];
     char duracion[10];
+    int id;
 }Cancion;
 
 typedef struct{
@@ -27,36 +29,63 @@ typedef struct{
 }Playlist;
 
 /* -------------------------------------------------- */
-/* Datos de prueba                                    */
+/* Datos (se piden al servidor)                       */
 /* -------------------------------------------------- */
 
-static void inicializar_datos(Playlist playlists[], int *cantidad){
-    *cantidad = 3;
+/* Carga las playlists del usuario. Devuelve 1 si salio bien */
+static int cargar_playlists(Playlist playlists[], int *cantidad){
+    RegPlaylist registros[IPC_MAX_PLAYLISTS];
+    int n, i;
 
-    strcpy(playlists[0].nombre, "Rock");
-    playlists[0].cantidad = 2;
+    *cantidad = 0;
 
-    playlists[0].canciones[0] = (Cancion){
-        "Numb",
-        "Linkin Park",
-        "Meteora",
-        "Nu Metal",
-        "3:07"
-    };
+    n = ipc_listar_playlists(registros, IPC_MAX_PLAYLISTS);
+    if(n < 0){
+        mostrar_aviso(ipc_ultimo_error(), PAR_ERROR);
+        return 0;
+    }
 
-    playlists[0].canciones[1] = (Cancion){
-        "In the End",
-        "Linkin Park",
-        "Hybrid Theory",
-        "Alternative Rock",
-        "3:36"
-    };
+    if(n > MAX_PLAYLISTS){
+        n = MAX_PLAYLISTS;
+    }
 
-    strcpy(playlists[1].nombre, "Favoritas");
-    playlists[1].cantidad = 0;
+    for(i = 0; i < n; i++){
+        snprintf(playlists[i].nombre, MAX_NOMBRE, "%s", registros[i].nombre);
+        playlists[i].cantidad = registros[i].cantidad;   /* las canciones se piden al abrir la playlist */
+    }
 
-    strcpy(playlists[2].nombre, "Musica para estudiar");
-    playlists[2].cantidad = 0;
+    *cantidad = n;
+    return 1;
+}
+
+/* Carga las canciones de una playlist. Devuelve 1 si salio bien */
+static int cargar_canciones(Playlist *playlist){
+    RegCancion registros[IPC_MAX_CANCIONES_PLAYLIST];
+    int n, i;
+
+    n = ipc_listar_canciones_playlist(playlist->nombre, registros, IPC_MAX_CANCIONES_PLAYLIST);
+    if(n < 0){
+        mostrar_aviso(ipc_ultimo_error(), PAR_ERROR);
+        return 0;
+    }
+
+    if(n > MAX_CANCIONES){
+        n = MAX_CANCIONES;
+    }
+
+    for(i = 0; i < n; i++){
+        Cancion *c = &playlist->canciones[i];
+
+        snprintf(c->nombre,   sizeof(c->nombre),   "%s", registros[i].titulo);
+        snprintf(c->artista,  sizeof(c->artista),  "%s", registros[i].artista);
+        snprintf(c->album,    sizeof(c->album),    "%s", registros[i].album);
+        snprintf(c->genero,   sizeof(c->genero),   "%s", registros[i].genero);
+        snprintf(c->duracion, sizeof(c->duracion), "%s", registros[i].duracion);
+        c->id = registros[i].id;
+    }
+
+    playlist->cantidad = n;
+    return 1;
 }
 
 /* -------------------------------------------------- */
@@ -300,6 +329,11 @@ static void mostrar_detalle(Playlist *playlist){
     int filas, columnas;
     char pregunta[120];
 
+    /* Las canciones de la playlist se piden al servidor al abrirla */
+    if(!cargar_canciones(playlist)){
+        return;
+    }
+
     while(1){
 
         getmaxyx(stdscr, filas, columnas);
@@ -353,12 +387,18 @@ static void mostrar_detalle(Playlist *playlist){
                     snprintf(pregunta, sizeof(pregunta), "Eliminar \"%s\"?", playlist->canciones[seleccion].nombre);
 
                     if(confirmar(pregunta)){
-                        borrar_cancion(playlist, seleccion);
 
-                        modo_eliminar = 0;
-                        seleccion = 0;
+                        if(ipc_quitar_cancion(playlist->nombre, playlist->canciones[seleccion].id) == 0){
+                            borrar_cancion(playlist, seleccion);
 
-                        mostrar_aviso("Cancion eliminada.", PAR_EXITO);
+                            modo_eliminar = 0;
+                            seleccion = 0;
+
+                            mostrar_aviso("Cancion eliminada.", PAR_EXITO);
+                        }
+                        else{
+                            mostrar_aviso(ipc_ultimo_error(), PAR_ERROR);
+                        }
                     }
                 }
 
@@ -501,7 +541,7 @@ void mostrar_playlists(void){
     char nombre[MAX_NOMBRE];
     char pregunta[MAX_NOMBRE + 20];
 
-    inicializar_datos(playlists, &cantidad);
+    cargar_playlists(playlists, &cantidad);
 
     while(1){
 
@@ -556,12 +596,18 @@ void mostrar_playlists(void){
                     snprintf(pregunta, sizeof(pregunta), "Eliminar \"%s\"?", playlists[seleccion].nombre);
 
                     if(confirmar(pregunta)){
-                        borrar_playlist(playlists, &cantidad, seleccion);
 
-                        modo_eliminar = 0;
-                        seleccion = 0;
+                        if(ipc_eliminar_playlist(playlists[seleccion].nombre) == 0){
+                            borrar_playlist(playlists, &cantidad, seleccion);
 
-                        mostrar_aviso("Playlist eliminada.", PAR_EXITO);
+                            modo_eliminar = 0;
+                            seleccion = 0;
+
+                            mostrar_aviso("Playlist eliminada.", PAR_EXITO);
+                        }
+                        else{
+                            mostrar_aviso(ipc_ultimo_error(), PAR_ERROR);
+                        }
                     }
                 }
 
@@ -592,12 +638,13 @@ void mostrar_playlists(void){
                     if(repetida){
                         mostrar_aviso("Ese nombre ya existe.", PAR_ERROR);
                     }
+                    else if(ipc_crear_playlist(nombre) != 0){
+                        mostrar_aviso(ipc_ultimo_error(), PAR_ERROR);
+                    }
                     else{
-                        strcpy(playlists[cantidad].nombre, nombre);
-                        playlists[cantidad].cantidad = 0;
-
-                        cantidad++;
-                        seleccion = cantidad - 1;
+                        /* Se vuelve a pedir la lista: el servidor es quien guarda el nombre final */
+                        cargar_playlists(playlists, &cantidad);
+                        seleccion = cantidad > 0 ? cantidad - 1 : 0;
 
                         mostrar_aviso("Playlist creada.", PAR_EXITO);
                     }

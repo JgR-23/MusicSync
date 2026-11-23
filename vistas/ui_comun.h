@@ -5,7 +5,7 @@
 #include <stddef.h>
 
 #define TECLA_ESC 27
-#define MAX_CANCIONES 32
+#define MAX_CANCIONES 100
 #define MAX_TEXTO 64
 
 typedef enum {

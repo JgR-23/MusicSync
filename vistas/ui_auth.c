@@ -1,4 +1,5 @@
 #include "ui_auth.h"
+#include "ipc_cliente.h"
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -291,6 +292,7 @@ void inicializarLogin(EstadoLogin *estado)
     estado->campoActivo = 0;
     estado->mensaje[0] = '\0';
     estado->esError = 0;
+    estado->autenticado = 0;
 }
 
 void inicializarRegistro(EstadoRegistro *estado)
@@ -306,6 +308,7 @@ void inicializarRegistro(EstadoRegistro *estado)
     estado->campoActivo = 0;
     estado->mensaje[0] = '\0';
     estado->esError = 0;
+    estado->registrado = 0;
 }
 
 void dibujarLogin(const EstadoLogin *estado)
@@ -477,6 +480,8 @@ int validarContrasenaSegura(const char *pass)
 
 void validarYProcesarLogin(EstadoLogin *estado)
 {
+    estado->autenticado = 0;
+
     if(estado->lenUsuario == 0 || estado->lenContrasena == 0)
     {
         estado->esError = 1;
@@ -484,12 +489,23 @@ void validarYProcesarLogin(EstadoLogin *estado)
         return;
     }
 
+    /* Se envia al servidor por memoria compartida */
+    if(ipc_login(estado->usuario, estado->contrasena) != 0)
+    {
+        estado->esError = 1;
+        snprintf(estado->mensaje, sizeof(estado->mensaje), "Error: %.50s", ipc_ultimo_error());
+        return;
+    }
+
     estado->esError = 0;
-    snprintf(estado->mensaje, sizeof(estado->mensaje), "Datos validos. Listo para enviar al servidor");
+    estado->autenticado = 1;
+    snprintf(estado->mensaje, sizeof(estado->mensaje), "Bienvenido, %.40s", estado->usuario);
 }
 
 void validarYProcesarRegistro(EstadoRegistro *estado)
 {
+    estado->registrado = 0;
+
     if(estado->lenUsuario < 3)
     {
         estado->esError = 1;
@@ -518,11 +534,20 @@ void validarYProcesarRegistro(EstadoRegistro *estado)
         return;
     }
 
+    /* Se envia al servidor por memoria compartida */
+    if(ipc_registrar(estado->usuario, estado->correo, estado->contrasena) != 0)
+    {
+        estado->esError = 1;
+        snprintf(estado->mensaje, sizeof(estado->mensaje), "Error: %.50s", ipc_ultimo_error());
+        return;
+    }
+
     estado->esError = 0;
-    snprintf(estado->mensaje, sizeof(estado->mensaje), "Registro valido. Listo para enviar al servidor");
+    estado->registrado = 1;
+    snprintf(estado->mensaje, sizeof(estado->mensaje), "Registro exitoso");
 }
 
-/* Regresa 1 si el usuario eligio ir a Registrarse, 0 en otro caso */
+/* Regresa 1 si el usuario eligio ir a Registrarse, 2 si inicio sesion correctamente, 0 en otro caso */
 int teclaLogin(EstadoLogin *estado, int tecla)
 {
     if(tecla == KEY_UP || tecla == KEY_LEFT)
@@ -553,6 +578,11 @@ int teclaLogin(EstadoLogin *estado, int tecla)
         else if(estado->campoActivo == 2)
         {
             validarYProcesarLogin(estado);
+
+            if(estado->autenticado)
+            {
+                return 2;
+            }
         }
         else if(estado->campoActivo == 3)
         {

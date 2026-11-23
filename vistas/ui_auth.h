@@ -14,6 +14,7 @@ typedef struct
     int campoActivo; /* 0: usuario, 1: contrasena, 2: boton iniciar, 3: boton registrarse */
     char mensaje[120];
     int esError;
+    int autenticado; /* 1 si el servidor acepto las credenciales */
 } EstadoLogin;
 
 typedef struct
@@ -29,6 +30,7 @@ typedef struct
     int campoActivo; /* 0: usuario, 1: correo, 2: contrasena, 3: confirmar, 4: boton */
     char mensaje[120];
     int esError;
+    int registrado; /* 1 si el servidor registro al usuario */
 } EstadoRegistro;
 
 void colores(void);
