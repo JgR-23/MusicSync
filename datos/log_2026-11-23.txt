@@ -273,3 +273,10 @@
 [17:32:35] [PID 155694] Resultado OK: Sesion cerrada
 [17:33:36] Cerrando servidor...
 [17:33:37] Memoria compartida y semaforos eliminados. Adios.
+[19:34:28] Servidor listo (PID 207836). Esperando clientes... (Ctrl+C para salir)
+[19:34:45] [PID 208070] Cliente conectado (hilo atendiendolo)
+[19:35:19] [PID 208070] Solicita LOGIN (usuario 'jesus')
+[19:35:19] [PID 208070] Resultado ERROR: Usuario o contrasena incorrectos
+[19:35:26] [PID 208070] Cliente desconectado
+[19:35:36] [PID 208492] Cliente conectado (hilo atendiendolo)
+[19:35:40] [PID 208492] Cliente desconectado
