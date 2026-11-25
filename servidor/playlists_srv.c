@@ -4,6 +4,7 @@
 #include <strings.h>
 
 #include "biblioteca.h"
+#include "carrito_srv.h"
 #include "ipc_util.h"
 #include "playlists_srv.h"
 #include "respuesta.h"
@@ -19,7 +20,7 @@ typedef struct {
 
 static void ruta_archivo(const char *usuario, char *destino, size_t tam)
 {
-    snprintf(destino, tam, "datos/playlists_%s.txt", usuario);
+    snprintf(destino, tam, "datos/playlists_%.20s.txt", usuario);
 }
 
 static int cargar(const char *usuario, Playlist *pl, int max)
@@ -136,7 +137,7 @@ void srv_ver_playlists(Mensaje *m, const Sesion *s)
     }
     total = cargar(s->usuario, pl, MAX_PLAYLISTS_USR);
     for (i = 0; i < total; i++) {
-        snprintf(fila, sizeof(fila), "%s;%d\n", pl[i].nombre, pl[i].n);
+        snprintf(fila, sizeof(fila), "%.49s;%d\n", pl[i].nombre, pl[i].n);
         datos_agregar(m, fila);
     }
     resp_ok(m, "OK");
@@ -226,7 +227,7 @@ void srv_ver_canciones_pl(Mensaje *m, const Sesion *s)
 
     for (i = 0; i < pl[idx].n; i++) {
         if (biblioteca_buscar(pl[idx].ids[i], &c)) {
-            snprintf(fila, sizeof(fila), "%d;%s;%s;%s;%s;%s\n",
+            snprintf(fila, sizeof(fila), "%d;%.63s;%.63s;%.63s;%.63s;%.9s\n",
                      c.id, c.titulo, c.artista, c.album, c.genero, c.duracion);
         } else {
             /* Cancion que ya no esta en la biblioteca: se conserva la
@@ -257,6 +258,10 @@ void srv_agregar_a_pl(Mensaje *m, const Sesion *s)
     }
     if (!biblioteca_buscar(m->arg, &c)) {
         resp_error(m, "La cancion no existe en la biblioteca");
+        return;
+    }
+    if (!cancion_comprada(s->usuario, m->arg)) {
+        resp_error(m, "Primero debes comprar esta cancion");
         return;
     }
     for (i = 0; i < pl[idx].n; i++) {

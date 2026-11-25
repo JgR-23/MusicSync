@@ -6,7 +6,7 @@
 #include <string.h>
 
 void pantalla_biblioteca(const CancionUI *catalogo, int total_catalogo,
-                         AccionCancion al_elegir) {
+                         AccionCancion al_elegir, const char *info) {
     CancionUI lista[MAX_CANCIONES];
     int total_completo = total_catalogo > MAX_CANCIONES ? MAX_CANCIONES : total_catalogo;
     int total = total_completo;
@@ -31,6 +31,11 @@ void pantalla_biblioteca(const CancionUI *catalogo, int total_catalogo,
         mvprintw(1, 2, "MusicSync - Biblioteca");
         if (ancho > 36) {
             mvprintw(1, ancho - 24, "[%.*s]", 20, filtro);
+        }
+        if (info != NULL && ancho > 76) {
+            attron(A_BOLD);
+            mvprintw(1, 28, "%.*s", ancho - 56, info);
+            attroff(A_BOLD);
         }
         mvhline(2, 1, ACS_HLINE, ancho - 2);
 
@@ -75,7 +80,7 @@ void pantalla_biblioteca(const CancionUI *catalogo, int total_catalogo,
 
         mvhline(alto - 2, 1, ACS_HLINE, ancho - 2);
         mvprintw(alto - 1, 2, al_elegir != NULL
-                 ? "Flechas arriba/abajo | ENTER: elegir/agregar a playlist | ESC salir"
+                 ? "Flechas arriba/abajo | ENTER: agregar al carrito | ESC salir"
                  : "Flechas arriba/abajo | ENTER seleccionar | ESC salir");
         refresh();
 

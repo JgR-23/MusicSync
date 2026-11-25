@@ -1,0 +1,755 @@
+[06:55:11] Servidor listo (PID 9501). Esperando clientes... (Ctrl+C para salir)
+[06:55:25] [PID 9507] Cliente conectado (hilo atendiendolo)
+[06:56:31] [PID 9507] Solicita REGISTRO (usuario 'pedro')
+[06:56:31] [PID 9507] Resultado OK: Cuenta creada correctamente
+[06:56:48] [PID 9507] Solicita LOGIN (usuario 'pedro')
+[06:56:48] [PID 9507] Resultado OK: Bienvenido
+[06:56:48] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:56:48] [PID 9507] Resultado OK: OK
+[06:57:28] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[06:57:28] [PID 9507] Resultado OK: OK
+[06:58:09] [PID 9507] Solicita MODIFICAR_PERFIL (usuario 'pedro')
+[06:58:09] [PID 9507] Resultado OK: Datos actualizados correctamente
+[06:58:11] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[06:58:11] [PID 9507] Resultado OK: OK
+[06:58:35] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:58:35] [PID 9507] Resultado OK: OK
+[06:58:43] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[06:58:43] [PID 9507] Resultado OK: OK
+[06:59:06] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[06:59:06] [PID 9507] Resultado OK: OK
+[06:59:10] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:10] [PID 9507] Resultado OK: OK
+[06:59:15] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[06:59:15] [PID 9507] Resultado OK: OK
+[06:59:17] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:17] [PID 9507] Resultado OK: OK
+[06:59:20] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[06:59:20] [PID 9507] Resultado OK: OK
+[06:59:20] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:20] [PID 9507] Resultado OK: OK
+[06:59:35] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:35] [PID 9507] Resultado OK: OK
+[06:59:37] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[06:59:37] [PID 9507] Resultado OK: OK
+[06:59:40] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:40] [PID 9507] Resultado OK: OK
+[06:59:41] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[06:59:41] [PID 9507] Resultado OK: OK
+[06:59:41] [PID 9507] Solicita VER_BIBLIOTECA (usuario 'pedro')
+[06:59:41] [PID 9507] Resultado OK: OK
+[06:59:52] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[06:59:52] [PID 9507] Resultado OK: Cancion agregada al carrito
+[07:00:14] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:00:14] [PID 9507] Resultado OK: OK
+[07:00:51] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:00:51] [PID 9507] Resultado OK: OK
+[07:00:51] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:00:51] [PID 9507] Resultado OK: OK
+[07:00:52] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:00:52] [PID 9507] Resultado OK: OK
+[07:00:52] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:00:52] [PID 9507] Resultado OK: OK
+[07:01:21] [PID 9507] Solicita VACIAR_CARRITO (usuario 'pedro')
+[07:01:21] [PID 9507] Resultado OK: Carrito vaciado
+[07:01:22] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:01:22] [PID 9507] Resultado OK: OK
+[07:01:22] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:22] [PID 9507] Resultado OK: OK
+[07:01:24] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:24] [PID 9507] Resultado OK: OK
+[07:01:26] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:26] [PID 9507] Resultado OK: OK
+[07:01:26] [PID 9507] Solicita VER_BIBLIOTECA (usuario 'pedro')
+[07:01:26] [PID 9507] Resultado OK: OK
+[07:01:28] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:01:28] [PID 9507] Resultado OK: Cancion agregada al carrito
+[07:01:30] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:01:30] [PID 9507] Resultado OK: Cancion agregada al carrito
+[07:01:33] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:33] [PID 9507] Resultado OK: OK
+[07:01:36] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:01:36] [PID 9507] Resultado OK: OK
+[07:01:37] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:37] [PID 9507] Resultado OK: OK
+[07:01:38] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:01:38] [PID 9507] Resultado OK: OK
+[07:01:38] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:38] [PID 9507] Resultado OK: OK
+[07:01:45] [PID 9507] Solicita COMPRAR (usuario 'pedro')
+[07:01:45] [PID 9507] Resultado OK: Compra realizada: 2 canciones, total $29.00. Saldo: $471.00
+[07:01:49] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:01:49] [PID 9507] Resultado OK: OK
+[07:01:49] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:49] [PID 9507] Resultado OK: OK
+[07:01:54] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:01:54] [PID 9507] Resultado OK: OK
+[07:01:57] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:01:57] [PID 9507] Resultado OK: OK
+[07:02:01] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:01] [PID 9507] Resultado OK: OK
+[07:02:04] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:02:04] [PID 9507] Resultado OK: OK
+[07:02:09] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:02:09] [PID 9507] Resultado OK: OK
+[07:02:11] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:02:11] [PID 9507] Resultado OK: OK
+[07:02:11] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:11] [PID 9507] Resultado OK: OK
+[07:02:12] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:02:12] [PID 9507] Resultado OK: OK
+[07:02:17] [PID 9507] Solicita CREAR_PLAYLIST (usuario 'pedro')
+[07:02:17] [PID 9507] Resultado OK: Playlist creada
+[07:02:17] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:02:17] [PID 9507] Resultado OK: OK
+[07:02:29] [PID 9507] Solicita CREAR_PLAYLIST (usuario 'pedro')
+[07:02:29] [PID 9507] Resultado OK: Playlist creada
+[07:02:29] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:02:29] [PID 9507] Resultado OK: OK
+[07:02:30] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:30] [PID 9507] Resultado OK: OK
+[07:02:37] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:02:37] [PID 9507] Resultado OK: OK
+[07:02:37] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:37] [PID 9507] Resultado OK: OK
+[07:02:40] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:40] [PID 9507] Resultado OK: OK
+[07:02:44] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:02:44] [PID 9507] Resultado OK: OK
+[07:02:45] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:45] [PID 9507] Resultado OK: OK
+[07:02:46] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[07:02:46] [PID 9507] Resultado OK: OK
+[07:02:51] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:02:51] [PID 9507] Resultado OK: OK
+[07:02:54] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:02:54] [PID 9507] Resultado OK: OK
+[07:02:57] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:02:57] [PID 9507] Resultado OK: OK
+[07:02:59] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:02:59] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:02:59] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:02:59] [PID 9507] Resultado OK: OK
+[07:03:00] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:03:00] [PID 9507] Resultado OK: OK
+[07:03:01] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:03:01] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:03:02] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:03:02] [PID 9507] Resultado OK: OK
+[07:03:02] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:03:02] [PID 9507] Resultado OK: OK
+[07:03:03] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:03:03] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:03:04] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:03:04] [PID 9507] Resultado OK: OK
+[07:03:05] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:03:05] [PID 9507] Resultado OK: OK
+[07:03:06] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:03:06] [PID 9507] Resultado ERROR: La cancion ya esta en esa playlist
+[07:03:07] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:03:07] [PID 9507] Resultado OK: OK
+[07:03:07] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:03:07] [PID 9507] Resultado OK: OK
+[07:03:12] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:03:12] [PID 9507] Resultado OK: OK
+[07:03:12] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:03:12] [PID 9507] Resultado OK: OK
+[07:03:16] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:03:16] [PID 9507] Resultado OK: OK
+[07:03:17] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:03:17] [PID 9507] Resultado OK: OK
+[07:03:36] [PID 9507] Solicita QUITAR_DE_PLAYLIST (usuario 'pedro')
+[07:03:36] [PID 9507] Resultado OK: Cancion eliminada de la playlist
+[07:03:36] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:03:36] [PID 9507] Resultado OK: OK
+[07:03:39] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:03:39] [PID 9507] Resultado OK: OK
+[07:03:46] [PID 9507] Solicita QUITAR_DE_PLAYLIST (usuario 'pedro')
+[07:03:46] [PID 9507] Resultado OK: Cancion eliminada de la playlist
+[07:03:47] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:03:47] [PID 9507] Resultado OK: OK
+[07:03:52] [PID 9507] Solicita ELIMINAR_PLAYLIST (usuario 'pedro')
+[07:03:52] [PID 9507] Resultado OK: Playlist eliminada
+[07:03:53] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:03:53] [PID 9507] Resultado OK: OK
+[07:03:56] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:03:56] [PID 9507] Resultado OK: OK
+[07:03:58] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:03:58] [PID 9507] Resultado OK: OK
+[07:04:00] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:00] [PID 9507] Resultado OK: OK
+[07:04:02] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:04:02] [PID 9507] Resultado OK: OK
+[07:04:03] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:03] [PID 9507] Resultado OK: OK
+[07:04:13] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:13] [PID 9507] Resultado OK: OK
+[07:04:13] [PID 9507] Solicita VER_BIBLIOTECA (usuario 'pedro')
+[07:04:13] [PID 9507] Resultado OK: OK
+[07:04:18] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:04:18] [PID 9507] Resultado OK: Cancion agregada al carrito
+[07:04:20] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:04:20] [PID 9507] Resultado ERROR: Esa cancion ya esta en tu carrito
+[07:04:26] [PID 9507] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:04:26] [PID 9507] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:04:32] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:32] [PID 9507] Resultado OK: OK
+[07:04:35] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:04:35] [PID 9507] Resultado OK: OK
+[07:04:37] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:37] [PID 9507] Resultado OK: OK
+[07:04:42] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:04:42] [PID 9507] Resultado OK: OK
+[07:04:42] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:42] [PID 9507] Resultado OK: OK
+[07:04:57] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:04:57] [PID 9507] Resultado OK: OK
+[07:05:00] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:05:00] [PID 9507] Resultado OK: OK
+[07:05:00] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:05:00] [PID 9507] Resultado OK: OK
+[07:05:03] [PID 9507] Solicita COMPRAR (usuario 'pedro')
+[07:05:03] [PID 9507] Resultado OK: Compra realizada: 1 cancion, total $11.00. Saldo: $460.00
+[07:05:04] [PID 9507] Solicita VER_CARRITO (usuario 'pedro')
+[07:05:04] [PID 9507] Resultado OK: OK
+[07:05:04] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:05:04] [PID 9507] Resultado OK: OK
+[07:05:17] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:05:17] [PID 9507] Resultado OK: OK
+[07:05:20] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:05:20] [PID 9507] Resultado OK: OK
+[07:05:23] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:05:23] [PID 9507] Resultado OK: OK
+[07:05:25] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:05:25] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:05:31] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:05:31] [PID 9507] Resultado OK: OK
+[07:05:32] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:05:32] [PID 9507] Resultado OK: OK
+[07:05:33] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:05:33] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:05:34] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:05:34] [PID 9507] Resultado OK: OK
+[07:05:34] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:05:34] [PID 9507] Resultado OK: OK
+[07:05:35] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:05:35] [PID 9507] Resultado OK: Cancion agregada a la playlist
+[07:05:35] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:05:35] [PID 9507] Resultado OK: OK
+[07:05:36] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:05:36] [PID 9507] Resultado OK: OK
+[07:05:37] [PID 9507] Solicita AGREGAR_A_PLAYLIST (usuario 'pedro')
+[07:05:37] [PID 9507] Resultado ERROR: La cancion ya esta en esa playlist
+[07:05:38] [PID 9507] Solicita VER_COMPRAS (usuario 'pedro')
+[07:05:38] [PID 9507] Resultado OK: OK
+[07:05:40] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:05:40] [PID 9507] Resultado OK: OK
+[07:05:41] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[07:05:41] [PID 9507] Resultado OK: OK
+[07:05:48] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[07:05:48] [PID 9507] Resultado OK: OK
+[07:05:55] [PID 9507] Solicita VER_PERFIL (usuario 'pedro')
+[07:05:55] [PID 9507] Resultado OK: OK
+[07:05:56] [PID 9507] Solicita VER_SALDO (usuario 'pedro')
+[07:05:56] [PID 9507] Resultado OK: OK
+[07:05:59] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:05:59] [PID 9507] Resultado OK: OK
+[07:06:01] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:06:01] [PID 9507] Resultado OK: OK
+[07:06:15] [PID 9507] Solicita QUITAR_DE_PLAYLIST (usuario 'pedro')
+[07:06:15] [PID 9507] Resultado OK: Cancion eliminada de la playlist
+[07:06:16] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:06:16] [PID 9507] Resultado OK: OK
+[07:06:23] [PID 9507] Solicita CREAR_PLAYLIST (usuario 'pedro')
+[07:06:23] [PID 9507] Resultado OK: Playlist creada
+[07:06:24] [PID 9507] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:06:24] [PID 9507] Resultado OK: OK
+[07:06:26] [PID 9507] Solicita VER_CANCIONES_PLAYLIST (usuario 'pedro')
+[07:06:26] [PID 9507] Resultado OK: OK
+[07:07:07] [PID 9698] Cliente conectado (hilo atendiendolo)
+[07:07:20] [PID 9698] Solicita LOGIN (usuario 'pedro')
+[07:07:20] [PID 9698] Resultado ERROR: Usuario o contrasena incorrectos
+[07:07:33] [PID 9698] Solicita LOGIN (usuario 'pedro')
+[07:07:33] [PID 9698] Resultado OK: Bienvenido
+[07:07:33] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:07:33] [PID 9698] Resultado OK: OK
+[07:07:39] [PID 9698] Solicita VER_PLAYLISTS (usuario 'pedro')
+[07:07:39] [PID 9698] Resultado OK: OK
+[07:08:22] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:08:22] [PID 9698] Resultado OK: OK
+[07:08:26] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:08:26] [PID 9698] Resultado OK: OK
+[07:08:28] [PID 9698] Solicita VER_PERFIL (usuario 'pedro')
+[07:08:28] [PID 9698] Resultado OK: OK
+[07:08:29] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:08:29] [PID 9698] Resultado OK: OK
+[07:08:30] [PID 9698] Solicita VER_CARRITO (usuario 'pedro')
+[07:08:30] [PID 9698] Resultado OK: OK
+[07:08:30] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:08:30] [PID 9698] Resultado OK: OK
+[07:08:33] [PID 9698] Solicita VER_SALDO (usuario 'pedro')
+[07:08:33] [PID 9698] Resultado OK: OK
+[07:08:36] [PID 9698] Solicita CERRAR_SESION (usuario 'pedro')
+[07:08:36] [PID 9698] Resultado OK: Sesion cerrada
+[07:09:43] [PID 9788] Cliente conectado (hilo atendiendolo)
+[07:10:26] [PID 9788] Solicita LOGIN (usuario 'pedro')
+[07:10:26] [PID 9788] Resultado OK: Bienvenido
+[07:10:26] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:10:26] [PID 9788] Resultado OK: OK
+[07:11:25] [PID 9698] Solicita REGISTRO (usuario 'pedro')
+[07:11:25] [PID 9698] Resultado ERROR: Ese nombre de usuario ya esta registrado
+[07:12:34] [PID 9698] Solicita REGISTRO (usuario 'hugo')
+[07:12:34] [PID 9698] Resultado OK: Cuenta creada correctamente
+[07:12:47] [PID 9698] Solicita LOGIN (usuario 'hugo')
+[07:12:47] [PID 9698] Resultado OK: Bienvenido
+[07:12:47] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:47] [PID 9698] Resultado OK: OK
+[07:12:50] [PID 9698] Solicita VER_COMPRAS (usuario 'hugo')
+[07:12:50] [PID 9698] Resultado OK: OK
+[07:12:51] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:51] [PID 9698] Resultado OK: OK
+[07:12:52] [PID 9698] Solicita VER_CARRITO (usuario 'hugo')
+[07:12:52] [PID 9698] Resultado OK: OK
+[07:12:52] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:52] [PID 9698] Resultado OK: OK
+[07:12:53] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:53] [PID 9698] Resultado OK: OK
+[07:12:55] [PID 9698] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:12:55] [PID 9698] Resultado OK: OK
+[07:12:57] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:57] [PID 9698] Resultado OK: OK
+[07:12:58] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:12:58] [PID 9698] Resultado OK: OK
+[07:12:58] [PID 9698] Solicita VER_BIBLIOTECA (usuario 'hugo')
+[07:12:58] [PID 9698] Resultado OK: OK
+[07:13:10] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:10] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:13:13] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:13] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:13:18] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:18] [PID 9788] Resultado OK: OK
+[07:13:18] [PID 9788] Solicita VER_BIBLIOTECA (usuario 'pedro')
+[07:13:18] [PID 9788] Resultado OK: OK
+[07:13:20] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:20] [PID 9788] Resultado OK: Cancion agregada al carrito
+[07:13:21] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:21] [PID 9788] Resultado OK: Cancion agregada al carrito
+[07:13:22] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:22] [PID 9788] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:13:24] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:24] [PID 9788] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:13:24] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:24] [PID 9788] Resultado OK: Cancion agregada al carrito
+[07:13:25] [PID 9788] Solicita AGREGAR_AL_CARRITO (usuario 'pedro')
+[07:13:25] [PID 9788] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:13:27] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:27] [PID 9788] Resultado OK: OK
+[07:13:29] [PID 9788] Solicita VER_COMPRAS (usuario 'pedro')
+[07:13:29] [PID 9788] Resultado OK: OK
+[07:13:32] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:32] [PID 9788] Resultado OK: OK
+[07:13:33] [PID 9788] Solicita VER_CARRITO (usuario 'pedro')
+[07:13:33] [PID 9788] Resultado OK: OK
+[07:13:33] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:33] [PID 9788] Resultado OK: OK
+[07:13:36] [PID 9788] Solicita COMPRAR (usuario 'pedro')
+[07:13:36] [PID 9788] Resultado OK: Compra realizada: 3 canciones, total $43.49. Saldo: $416.51
+[07:13:39] [PID 9788] Solicita VER_CARRITO (usuario 'pedro')
+[07:13:39] [PID 9788] Resultado OK: OK
+[07:13:39] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:39] [PID 9788] Resultado OK: OK
+[07:13:43] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:43] [PID 9788] Resultado OK: OK
+[07:13:44] [PID 9788] Solicita VER_COMPRAS (usuario 'pedro')
+[07:13:44] [PID 9788] Resultado OK: OK
+[07:13:45] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:45] [PID 9788] Resultado OK: OK
+[07:13:48] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:13:48] [PID 9788] Resultado OK: OK
+[07:13:55] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:55] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:13:56] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:56] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:13:57] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:57] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:13:57] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:57] [PID 9698] Resultado ERROR: Esa cancion ya esta en tu carrito
+[07:13:59] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:13:59] [PID 9698] Resultado ERROR: Esa cancion ya esta en tu carrito
+[07:14:00] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:14:00] [PID 9698] Resultado OK: Cancion agregada al carrito
+[07:14:01] [PID 9698] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:14:01] [PID 9698] Resultado ERROR: Esa cancion ya esta en tu carrito
+[07:14:02] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:14:02] [PID 9698] Resultado OK: OK
+[07:14:04] [PID 9698] Solicita VER_CARRITO (usuario 'hugo')
+[07:14:04] [PID 9698] Resultado OK: OK
+[07:14:04] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:14:04] [PID 9698] Resultado OK: OK
+[07:14:07] [PID 9698] Solicita COMPRAR (usuario 'hugo')
+[07:14:07] [PID 9698] Resultado OK: Compra realizada: 6 canciones, total $83.49. Saldo: $416.51
+[07:14:08] [PID 9698] Solicita VER_CARRITO (usuario 'hugo')
+[07:14:08] [PID 9698] Resultado OK: OK
+[07:14:08] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:14:08] [PID 9698] Resultado OK: OK
+[07:14:09] [PID 9698] Solicita VER_SALDO (usuario 'hugo')
+[07:14:09] [PID 9698] Resultado OK: OK
+[07:14:20] [PID 9698] Solicita CERRAR_SESION (usuario 'hugo')
+[07:14:20] [PID 9698] Resultado OK: Sesion cerrada
+[07:14:22] [PID 9698] Cliente desconectado
+[07:14:28] [PID 9507] El cliente dejo de existir
+[07:14:34] [PID 9788] Solicita VER_SALDO (usuario 'pedro')
+[07:14:34] [PID 9788] Resultado OK: OK
+[07:14:35] [PID 9788] Solicita CERRAR_SESION (usuario 'pedro')
+[07:14:35] [PID 9788] Resultado OK: Sesion cerrada
+[07:14:39] [PID 9788] Cliente desconectado
+[07:14:48] Cerrando servidor...
+[07:14:48] Memoria compartida y semaforos eliminados. Adios.
+[07:23:18] Servidor listo (PID 10304). Esperando clientes... (Ctrl+C para salir)
+[07:23:30] [PID 10338] Cliente conectado (hilo atendiendolo)
+[07:23:43] [PID 10338] Solicita LOGIN (usuario 'hugo')
+[07:23:43] [PID 10338] Resultado OK: Bienvenido
+[07:23:43] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:23:43] [PID 10338] Resultado OK: OK
+[07:23:50] [PID 10338] Solicita VER_CARRITO (usuario 'hugo')
+[07:23:50] [PID 10338] Resultado OK: OK
+[07:23:50] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:23:50] [PID 10338] Resultado OK: OK
+[07:23:52] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:23:52] [PID 10338] Resultado OK: OK
+[07:23:54] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:23:54] [PID 10338] Resultado OK: OK
+[07:23:55] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:23:55] [PID 10338] Resultado OK: OK
+[07:23:57] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:23:57] [PID 10338] Resultado OK: OK
+[07:23:57] [PID 10338] Solicita VER_BIBLIOTECA (usuario 'hugo')
+[07:23:57] [PID 10338] Resultado OK: OK
+[07:24:10] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:10] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:12] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:12] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:13] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:13] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:13] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:13] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:14] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:14] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:15] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:15] [PID 10338] Resultado ERROR: Ya compraste esta cancion (mira 'Mis compras')
+[07:24:15] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:15] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:16] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:16] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:17] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:17] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:18] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:18] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:18] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:18] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:19] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:19] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:20] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:20] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:20] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:20] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:21] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:21] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:22] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:22] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:23] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:23] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:23] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:23] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:24] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:24] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:25] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:25] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:26] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:26] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:26] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:26] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:27] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:27] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:28] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:28] [PID 10338] Resultado OK: Cancion agregada al carrito
+[07:24:30] [PID 10338] Solicita AGREGAR_AL_CARRITO (usuario 'hugo')
+[07:24:30] [PID 10338] Resultado ERROR: Esa cancion ya esta en tu carrito
+[07:24:34] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:24:34] [PID 10338] Resultado OK: OK
+[07:24:37] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:24:37] [PID 10338] Resultado OK: OK
+[07:24:39] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:24:39] [PID 10338] Resultado OK: OK
+[07:24:41] [PID 10338] Solicita VER_CARRITO (usuario 'hugo')
+[07:24:41] [PID 10338] Resultado OK: OK
+[07:24:41] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:24:41] [PID 10338] Resultado OK: OK
+[07:24:53] [PID 10338] Solicita COMPRAR (usuario 'hugo')
+[07:24:53] [PID 10338] Resultado OK: Compra realizada: 18 canciones, total $236.00. Saldo: $180.51
+[07:24:54] [PID 10338] Solicita VER_CARRITO (usuario 'hugo')
+[07:24:54] [PID 10338] Resultado OK: OK
+[07:24:54] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:24:54] [PID 10338] Resultado OK: OK
+[07:25:00] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:00] [PID 10338] Resultado OK: OK
+[07:25:01] [PID 10338] Solicita VER_CARRITO (usuario 'hugo')
+[07:25:01] [PID 10338] Resultado OK: OK
+[07:25:01] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:01] [PID 10338] Resultado OK: OK
+[07:25:02] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:02] [PID 10338] Resultado OK: OK
+[07:25:08] [PID 10338] Solicita VER_PERFIL (usuario 'hugo')
+[07:25:08] [PID 10338] Resultado OK: OK
+[07:25:09] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:09] [PID 10338] Resultado OK: OK
+[07:25:10] [PID 10338] Solicita VER_CARRITO (usuario 'hugo')
+[07:25:10] [PID 10338] Resultado OK: OK
+[07:25:10] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:10] [PID 10338] Resultado OK: OK
+[07:25:11] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:11] [PID 10338] Resultado OK: OK
+[07:25:12] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:12] [PID 10338] Resultado OK: OK
+[07:25:12] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:12] [PID 10338] Resultado OK: OK
+[07:25:15] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:15] [PID 10338] Resultado OK: OK
+[07:25:21] [PID 10338] Solicita CREAR_PLAYLIST (usuario 'hugo')
+[07:25:21] [PID 10338] Resultado OK: Playlist creada
+[07:25:22] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:22] [PID 10338] Resultado OK: OK
+[07:25:24] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:25:24] [PID 10338] Resultado OK: OK
+[07:25:27] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:27] [PID 10338] Resultado OK: OK
+[07:25:32] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:32] [PID 10338] Resultado OK: OK
+[07:25:33] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:33] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:33] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:33] [PID 10338] Resultado OK: OK
+[07:25:34] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:34] [PID 10338] Resultado OK: OK
+[07:25:35] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:35] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:35] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:35] [PID 10338] Resultado OK: OK
+[07:25:36] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:36] [PID 10338] Resultado OK: OK
+[07:25:36] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:36] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:37] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:37] [PID 10338] Resultado OK: OK
+[07:25:38] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:38] [PID 10338] Resultado OK: OK
+[07:25:38] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:38] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:38] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:38] [PID 10338] Resultado OK: OK
+[07:25:39] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:39] [PID 10338] Resultado OK: OK
+[07:25:39] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:39] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:39] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:39] [PID 10338] Resultado OK: OK
+[07:25:40] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:40] [PID 10338] Resultado OK: OK
+[07:25:40] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:40] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:40] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:40] [PID 10338] Resultado OK: OK
+[07:25:41] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:41] [PID 10338] Resultado OK: OK
+[07:25:41] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:41] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:42] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:42] [PID 10338] Resultado OK: OK
+[07:25:42] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:42] [PID 10338] Resultado OK: OK
+[07:25:42] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:42] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:43] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:43] [PID 10338] Resultado OK: OK
+[07:25:43] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:43] [PID 10338] Resultado OK: OK
+[07:25:44] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:44] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:44] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:44] [PID 10338] Resultado OK: OK
+[07:25:45] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:45] [PID 10338] Resultado OK: OK
+[07:25:45] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:45] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:46] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:46] [PID 10338] Resultado OK: OK
+[07:25:46] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:46] [PID 10338] Resultado OK: OK
+[07:25:47] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:47] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:47] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:47] [PID 10338] Resultado OK: OK
+[07:25:48] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:48] [PID 10338] Resultado OK: OK
+[07:25:48] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:48] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:49] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:49] [PID 10338] Resultado OK: OK
+[07:25:49] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:49] [PID 10338] Resultado OK: OK
+[07:25:49] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:49] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:50] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:50] [PID 10338] Resultado OK: OK
+[07:25:50] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:50] [PID 10338] Resultado OK: OK
+[07:25:51] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:51] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:51] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:51] [PID 10338] Resultado OK: OK
+[07:25:52] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:52] [PID 10338] Resultado OK: OK
+[07:25:52] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:52] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:52] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:52] [PID 10338] Resultado OK: OK
+[07:25:52] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:52] [PID 10338] Resultado OK: OK
+[07:25:53] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:53] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:53] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:53] [PID 10338] Resultado OK: OK
+[07:25:54] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:54] [PID 10338] Resultado OK: OK
+[07:25:54] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:54] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:54] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:54] [PID 10338] Resultado OK: OK
+[07:25:54] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:54] [PID 10338] Resultado OK: OK
+[07:25:55] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:55] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:55] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:55] [PID 10338] Resultado OK: OK
+[07:25:55] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:55] [PID 10338] Resultado OK: OK
+[07:25:55] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:55] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:56] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:56] [PID 10338] Resultado OK: OK
+[07:25:56] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:56] [PID 10338] Resultado OK: OK
+[07:25:56] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:56] [PID 10338] Resultado OK: Cancion agregada a la playlist
+[07:25:57] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:57] [PID 10338] Resultado OK: OK
+[07:25:57] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:57] [PID 10338] Resultado OK: OK
+[07:25:57] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:57] [PID 10338] Resultado ERROR: La playlist esta llena
+[07:25:58] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:58] [PID 10338] Resultado OK: OK
+[07:25:58] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:25:58] [PID 10338] Resultado OK: OK
+[07:25:58] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:25:58] [PID 10338] Resultado ERROR: La playlist esta llena
+[07:25:59] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:25:59] [PID 10338] Resultado OK: OK
+[07:26:00] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:26:00] [PID 10338] Resultado OK: OK
+[07:26:00] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:26:00] [PID 10338] Resultado ERROR: La playlist esta llena
+[07:26:00] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:26:00] [PID 10338] Resultado OK: OK
+[07:26:01] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:26:01] [PID 10338] Resultado OK: OK
+[07:26:01] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:26:01] [PID 10338] Resultado ERROR: La playlist esta llena
+[07:26:01] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:26:01] [PID 10338] Resultado OK: OK
+[07:26:02] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:26:02] [PID 10338] Resultado OK: OK
+[07:26:04] [PID 10338] Solicita AGREGAR_A_PLAYLIST (usuario 'hugo')
+[07:26:04] [PID 10338] Resultado ERROR: La cancion ya esta en esa playlist
+[07:26:04] [PID 10338] Solicita VER_COMPRAS (usuario 'hugo')
+[07:26:04] [PID 10338] Resultado OK: OK
+[07:26:07] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:26:07] [PID 10338] Resultado OK: OK
+[07:26:08] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:26:08] [PID 10338] Resultado OK: OK
+[07:26:08] [PID 10338] Solicita VER_BIBLIOTECA (usuario 'hugo')
+[07:26:08] [PID 10338] Resultado OK: OK
+[07:26:10] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:26:10] [PID 10338] Resultado OK: OK
+[07:26:11] [PID 10338] Solicita VER_PLAYLISTS (usuario 'hugo')
+[07:26:11] [PID 10338] Resultado OK: OK
+[07:26:12] [PID 10338] Solicita VER_CANCIONES_PLAYLIST (usuario 'hugo')
+[07:26:12] [PID 10338] Resultado OK: OK
+[07:26:43] [PID 10338] Solicita VER_SALDO (usuario 'hugo')
+[07:26:43] [PID 10338] Resultado OK: OK
+[07:26:50] [PID 10338] Solicita CERRAR_SESION (usuario 'hugo')
+[07:26:50] [PID 10338] Resultado OK: Sesion cerrada
+[07:26:53] [PID 10338] Cliente desconectado
+[07:27:00] Cerrando servidor...
+[07:27:00] Memoria compartida y semaforos eliminados. Adios.
+[07:27:50] Servidor listo (PID 10514). Esperando clientes... (Ctrl+C para salir)
+[07:27:57] [PID 10520] Cliente conectado (hilo atendiendolo)
+[07:28:06] [PID 10520] Solicita LOGIN (usuario 'hugo')
+[07:28:06] [PID 10520] Resultado OK: Bienvenido
+[07:28:06] [PID 10520] Solicita VER_SALDO (usuario 'hugo')
+[07:28:06] [PID 10520] Resultado OK: OK
+[07:28:09] [PID 10520] Solicita VER_COMPRAS (usuario 'hugo')
+[07:28:09] [PID 10520] Resultado OK: OK
+[07:28:16] [PID 10520] Solicita VER_SALDO (usuario 'hugo')
+[07:28:16] [PID 10520] Resultado OK: OK
+[07:28:19] [PID 10520] Solicita CERRAR_SESION (usuario 'hugo')
+[07:28:19] [PID 10520] Resultado OK: Sesion cerrada
+[07:28:30] [PID 10557] Cliente conectado (hilo atendiendolo)
+[07:28:40] [PID 10557] Cliente desconectado
+[07:28:49] [PID 10564] Cliente conectado (hilo atendiendolo)
+[07:29:04] [PID 10564] Solicita LOGIN_ADMIN (sin sesion)
+[07:29:04] [PID 10564] Resultado ERROR: Contrasena de administrador incorrecta
+[07:30:27] [PID 10520] Solicita LOGIN (usuario 'admin')
+[07:30:27] [PID 10520] Resultado ERROR: Usuario o contrasena incorrectos
+[07:30:47] [PID 10520] Solicita LOGIN (usuario 'admin')
+[07:30:47] [PID 10520] Resultado ERROR: Usuario o contrasena incorrectos
+[07:33:28] [PID 10520] Solicita LOGIN (usuario 'admin')
+[07:33:28] [PID 10520] Resultado ERROR: Usuario o contrasena incorrectos
+[07:34:34] [PID 10520] Solicita LOGIN (usuario 'admin')
+[07:34:34] [PID 10520] Resultado ERROR: Usuario o contrasena incorrectos
+[07:36:17] [PID 10564] Solicita LOGIN_ADMIN (sin sesion)
+[07:36:17] [PID 10564] Resultado OK: Bienvenido administrador
+[07:36:22] [PID 10564] Solicita VER_BIBLIOTECA (usuario 'admin')
+[07:36:22] [PID 10564] Resultado OK: OK
+[07:36:34] [PID 10564] Solicita VER_BIBLIOTECA (usuario 'admin')
+[07:36:34] [PID 10564] Resultado OK: OK
+[07:36:38] [PID 10564] Solicita VER_BIBLIOTECA (usuario 'admin')
+[07:36:38] [PID 10564] Resultado OK: OK
+[07:36:44] [PID 10564] Solicita VER_BIBLIOTECA (usuario 'admin')
+[07:36:44] [PID 10564] Resultado OK: OK
+[07:36:51] [PID 10564] Solicita ADMIN_REPORTE (usuario 'admin')
+[07:36:51] [PID 10564] Resultado OK: Reporte generado
+[07:36:54] [PID 10564] Solicita ADMIN_REPORTE (usuario 'admin')
+[07:36:54] [PID 10564] Resultado OK: Reporte generado
+[07:36:56] [PID 10564] Solicita ADMIN_REPORTE (usuario 'admin')
+[07:36:56] [PID 10564] Resultado OK: Reporte generado
+[07:37:08] [PID 10564] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[07:37:08] [PID 10564] Resultado OK: OK
+[07:37:15] [PID 10564] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[07:37:15] [PID 10564] Resultado OK: OK
+[07:37:23] [PID 10564] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[07:37:23] [PID 10564] Resultado OK: OK
+[07:37:26] [PID 10564] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[07:37:26] [PID 10564] Resultado OK: OK
+[07:37:38] [PID 10564] Solicita ADMIN_VER_USUARIOS (usuario 'admin')
+[07:37:38] [PID 10564] Resultado OK: OK
+[07:37:41] [PID 10564] Solicita ADMIN_ELIMINAR_USUARIO (usuario 'admin')
+[07:37:41] [PID 10564] Resultado OK: Usuario eliminado correctamente
+[07:37:48] [PID 10564] Solicita CERRAR_SESION (usuario 'admin')
+[07:37:48] [PID 10564] Resultado OK: Sesion cerrada
+[07:37:51] [PID 10564] Cliente desconectado
+[07:38:17] [PID 10520] Solicita LOGIN (usuario 'hugo')
+[07:38:17] [PID 10520] Resultado ERROR: Usuario o contrasena incorrectos
+[07:38:22] [PID 10520] Cliente desconectado
+[07:39:05] Cerrando servidor...
+[07:39:05] Memoria compartida y semaforos eliminados. Adios.

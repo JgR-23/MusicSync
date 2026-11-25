@@ -315,7 +315,7 @@ static void dibujar_canciones(Playlist *playlist, int seleccion, int inicio, int
     int y0 = 1;
     int yb, ly, visibles, w, tw, aw;
     int fila, i;
-    char titulo[MAX_NOMBRE + 4];
+    char titulo[128];
     const char *acciones[] = {
         "- Eliminar cancion",
         "< Regresar"
@@ -344,7 +344,7 @@ static void dibujar_canciones(Playlist *playlist, int seleccion, int inicio, int
 
     if(playlist->cantidad == 0){
         attron(A_DIM);
-        centrar_texto(ly + 1, x0, ancho, "Esta playlist todavia no tiene canciones.");
+        centrar_texto(ly + 1, x0, ancho, "Vacia. Agrega canciones desde 'Mis compras'.");
         attroff(A_DIM);
     }
 

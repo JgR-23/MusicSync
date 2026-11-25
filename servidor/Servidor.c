@@ -65,6 +65,7 @@ static void preparar_datos(void)
     asegurar_archivo("datos/usuarios.txt");
     asegurar_archivo("datos/canciones.txt");
     asegurar_archivo("datos/ventas.txt");
+    asegurar_archivo("datos/saldos.txt");
 }
 
 /* ------------------------------------------------------------------ */
@@ -85,9 +86,9 @@ static void despachar(Mensaje *m, Sesion *s, pid_t pid)
 
     if (m->accion == ACC_LOGIN || m->accion == ACC_REGISTRO ||
         m->accion == ACC_ADM_CREAR_USUARIO) {
-        snprintf(quien, sizeof(quien), "usuario '%s'", m->usuario);
+        snprintf(quien, sizeof(quien), "usuario '%.20s'", m->usuario);
     } else if (s->logueado) {
-        snprintf(quien, sizeof(quien), "usuario '%s'", s->usuario);
+        snprintf(quien, sizeof(quien), "usuario '%.20s'", s->usuario);
     } else {
         snprintf(quien, sizeof(quien), "sin sesion");
     }
@@ -128,6 +129,9 @@ static void despachar(Mensaje *m, Sesion *s, pid_t pid)
         case ACC_ADM_MODIFICAR_CANCION: srv_adm_modificar_cancion(m, s); break;
         case ACC_ADM_ELIMINAR_CANCION:  srv_adm_eliminar_cancion(m, s);  break;
         case ACC_ADM_REPORTE:           srv_reporte(m, s);               break;
+
+        case ACC_VER_COMPRAS:       srv_ver_compras(m, s);        break;
+        case ACC_VER_SALDO:         srv_ver_saldo(m, s);          break;
         default:
             m->codigo = RESP_ERROR;
             copiar_cadena(m->mensaje, sizeof(m->mensaje), "Accion desconocida");

@@ -6,6 +6,7 @@
 #include "cifrado.h"
 #include "ipc_util.h"
 #include "respuesta.h"
+#include "saldo.h"
 #include "usuarios.h"
 
 /* Formato de cada linea: usuario;correo;hash */
@@ -273,7 +274,7 @@ void srv_ver_perfil(Mensaje *m, const Sesion *s)
         resp_error(m, "No se encontro tu cuenta");
         return;
     }
-    snprintf(fila, sizeof(fila), "%s;%s\n", lista[idx].usuario, lista[idx].correo);
+    snprintf(fila, sizeof(fila), "%.20s;%.63s\n", lista[idx].usuario, lista[idx].correo);
     datos_agregar(m, fila);
     resp_ok(m, "OK");
 }
@@ -366,7 +367,7 @@ void srv_adm_ver_usuarios(Mensaje *m, const Sesion *s)
     }
     n = cargar_usuarios(lista, MAX_USUARIOS);
     for (i = 0; i < n; i++) {
-        snprintf(fila, sizeof(fila), "%s;%s\n", lista[i].usuario, lista[i].correo);
+        snprintf(fila, sizeof(fila), "%.20s;%.63s\n", lista[i].usuario, lista[i].correo);
         if (datos_agregar(m, fila) != 0) {
             break;
         }
@@ -447,10 +448,11 @@ void srv_adm_eliminar_usuario(Mensaje *m, const Sesion *s)
         return;
     }
 
-    snprintf(ruta, sizeof(ruta), "datos/playlists_%s.txt", m->texto);
+    snprintf(ruta, sizeof(ruta), "datos/playlists_%.20s.txt", m->texto);
     remove(ruta);
-    snprintf(ruta, sizeof(ruta), "datos/carrito_%s.txt", m->texto);
+    snprintf(ruta, sizeof(ruta), "datos/carrito_%.20s.txt", m->texto);
     remove(ruta);
+    saldo_eliminar(m->texto);
 
     resp_ok(m, "Usuario eliminado correctamente");
 }

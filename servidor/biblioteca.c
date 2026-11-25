@@ -59,7 +59,7 @@ void srv_biblioteca(Mensaje *m, const Sesion *s)
         if (!leer_linea(linea, &c)) {
             continue;
         }
-        snprintf(fila, sizeof(fila), "%d;%s;%s;%s;%s;%s;%.2f\n",
+        snprintf(fila, sizeof(fila), "%d;%.63s;%.63s;%.63s;%.63s;%.9s;%.2f\n",
                  c.id, c.titulo, c.artista, c.album, c.genero,
                  c.duracion, c.precio);
         if (datos_agregar(m, fila) != 0) {

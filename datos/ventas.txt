@@ -1,1 +1,31 @@
 2026-11-23;jesus;2;Yesterday;12.50
+2026-11-25;pedro;4;Breathe;14.00
+2026-11-25;pedro;3;No Quarter;15.00
+2026-11-25;pedro;6;In the End;11.00
+2026-11-25;pedro;1;Bohemian Rhapsody;19.99
+2026-11-25;pedro;2;Yesterday;12.50
+2026-11-25;pedro;5;Numb;11.00
+2026-11-25;hugo;6;In the End;11.00
+2026-11-25;hugo;4;Breathe;14.00
+2026-11-25;hugo;1;Bohemian Rhapsody;19.99
+2026-11-25;hugo;2;Yesterday;12.50
+2026-11-25;hugo;3;No Quarter;15.00
+2026-11-25;hugo;5;Numb;11.00
+2026-11-25;hugo;7;Stairway to Heaven;16.00
+2026-11-25;hugo;8;Hotel California;15.50
+2026-11-25;hugo;9;Smells Like Teen Spirit;13.00
+2026-11-25;hugo;10;Come As You Are;12.00
+2026-11-25;hugo;11;Sweet Child O' Mine;14.50
+2026-11-25;hugo;12;Back in Black;13.50
+2026-11-25;hugo;13;Thunderstruck;13.50
+2026-11-25;hugo;14;Enter Sandman;14.00
+2026-11-25;hugo;15;Nothing Else Matters;14.50
+2026-11-25;hugo;16;Wonderwall;12.00
+2026-11-25;hugo;17;Creep;12.00
+2026-11-25;hugo;18;Karma Police;12.50
+2026-11-25;hugo;19;Mr. Brightside;11.50
+2026-11-25;hugo;20;Seven Nation Army;11.50
+2026-11-25;hugo;21;Yellow;11.50
+2026-11-25;hugo;22;Viva la Vida;12.50
+2026-11-25;hugo;23;Billie Jean;13.00
+2026-11-25;hugo;24;Thriller;13.00

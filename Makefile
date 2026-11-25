@@ -3,13 +3,13 @@
 # (comunicacion con semaforos + memoria compartida, sin sockets)
 # ----------------------------------------------------------------
 CC     = gcc
-CFLAGS = -Wall -Wextra -Wpedantic -std=c11 -D_GNU_SOURCE -Icommon
+CFLAGS = -O2 -Wall -Wextra -Wpedantic -std=c11 -D_GNU_SOURCE -Icommon
 
 COMUN = common/ipc_util.c common/cifrado.c
 
 SRV_SRC = servidor/Servidor.c servidor/usuarios.c servidor/biblioteca.c \
           servidor/playlists_srv.c servidor/carrito_srv.c \
-          servidor/admin_srv.c servidor/reportes.c \
+          servidor/admin_srv.c servidor/reportes.c servidor/saldo.c \
           servidor/respuesta.c servidor/log.c \
           $(COMUN)
 SRV_INC = -Iservidor
@@ -22,7 +22,8 @@ UI_COMUN = cliente/comunicacion.c cliente/menus.c \
 CLI_SRC = cliente/Cliente.c $(UI_COMUN) \
           cliente/biblioteca/ui_comun.c cliente/biblioteca/ui_buscar.c \
           cliente/biblioteca/ui_biblioteca.c cliente/playlists/playlists.c \
-          cliente/carrito/ui_carrito.c cliente/perfil/ui_perfil.c \
+          cliente/carrito/ui_carrito.c cliente/compras/ui_compras.c \
+          cliente/perfil/ui_perfil.c \
           $(COMUN)
 
 ADM_SRC = administrador/Administrador.c administrador/admin_modulos.c \
@@ -30,7 +31,7 @@ ADM_SRC = administrador/Administrador.c administrador/admin_modulos.c \
 
 UI_INC  = -Icliente -Icliente/interfaz -Icliente/auth
 CLI_INC = $(UI_INC) -Icliente/biblioteca -Icliente/playlists \
-          -Icliente/carrito -Icliente/perfil
+          -Icliente/carrito -Icliente/compras -Icliente/perfil
 ADM_INC = $(UI_INC) -Iadministrador
 
 HEADERS = $(wildcard common/*.h servidor/*.h cliente/*.h cliente/*/*.h administrador/*.h)
