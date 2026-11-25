@@ -17,4 +17,7 @@ int         com_transaccion(void);         /* envia y espera: RESP_OK, RESP_ERRO
 int         com_perdida(void);             /* 1 si se perdio la conexion */
 const char *com_error(void);
 
+/* Consulta el saldo del cliente. 0 = ok, 1 = error del servidor, -1 = conexion perdida */
+int         com_saldo(double *saldo);
+
 #endif

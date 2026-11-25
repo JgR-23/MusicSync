@@ -7,6 +7,9 @@
 
 #define MAX_ITEMS 50
 
+/* Saldo del cliente: se actualiza cada vez que se lee el carrito */
+static double saldo_actual = 0.0;
+
 typedef struct {
     int    id;
     char   titulo[64];
@@ -57,6 +60,9 @@ static int cargar_carrito(ItemCarrito *items, int max)
             n++;
         }
     }
+    if (com_saldo(&saldo_actual) < 0) {
+        return -1;
+    }
     return n;
 }
 
@@ -95,7 +101,7 @@ static void dibujar(const ItemCarrito *items, int n, int foco, int inicio)
     };
     int filas, columnas, ancho, alto, x0, y0 = 1, yb, visibles, i;
     int ancho_titulo;
-    char total[32];
+    char total[200];
 
     getmaxyx(stdscr, filas, columnas);
     ancho = columnas - 4;
@@ -151,10 +157,16 @@ static void dibujar(const ItemCarrito *items, int n, int foco, int inicio)
     }
 
     dibujar_separador(yb - 6, x0, ancho);
-    snprintf(total, sizeof(total), "TOTAL: $%.2f", total_carrito(items, n));
-    attron(COLOR_PAIR(PAR_EXITO) | A_BOLD);
-    centrar_texto(yb - 5, x0, ancho, total);
-    attroff(COLOR_PAIR(PAR_EXITO) | A_BOLD);
+    {
+        double suma = total_carrito(items, n);
+        int par = suma > saldo_actual ? PAR_ERROR : PAR_EXITO;
+
+        snprintf(total, sizeof(total), "TOTAL: $%.2f     Tu saldo: $%.2f%s", suma, saldo_actual,
+                 suma > saldo_actual ? "  (insuficiente)" : "");
+        attron(COLOR_PAIR(par) | A_BOLD);
+        centrar_texto(yb - 5, x0, ancho, total);
+        attroff(COLOR_PAIR(par) | A_BOLD);
+    }
 
     for (i = 0; i < 3; i++) {
         if (foco == n + i) {
@@ -182,7 +194,7 @@ void mostrar_carrito(void)
 
     for (;;) {
         int filas, columnas, visibles, total_focos, tecla;
-        char pregunta[160];
+        char pregunta[200];
 
         getmaxyx(stdscr, filas, columnas);
         (void)columnas;
@@ -235,17 +247,21 @@ void mostrar_carrito(void)
                 if (n == 0) {
                     mostrar_aviso("Tu carrito esta vacio.", PAR_ERROR);
                 } else {
-                    snprintf(pregunta, sizeof(pregunta), "Comprar %d canciones por $%.2f?",
-                             n, total_carrito(items, n));
+                    snprintf(pregunta, sizeof(pregunta), "Comprar %d %s por $%.2f?",
+                             n, n == 1 ? "cancion" : "canciones", total_carrito(items, n));
                     if (confirmar(pregunta)) {
-                        if (accion_simple(ACC_COMPRAR, 0) < 0) {
+                        int resultado = accion_simple(ACC_COMPRAR, 0);
+
+                        if (resultado < 0) {
                             return;
                         }
                         n = cargar_carrito(items, MAX_ITEMS);
                         if (n < 0) {
                             return;
                         }
-                        foco = 0;
+                        if (resultado == RESP_OK) {
+                            foco = 0;      /* si fallo, el cursor se queda en "Comprar" */
+                        }
                     }
                 }
             } else if (foco == n + 1) {

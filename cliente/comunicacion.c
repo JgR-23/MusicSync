@@ -1,5 +1,6 @@
 #include <errno.h>
 #include <signal.h>
+#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/ipc.h>
@@ -150,4 +151,21 @@ int com_perdida(void)
 const char *com_error(void)
 {
     return ultimo_error;
+}
+
+int com_saldo(double *saldo)
+{
+    int r;
+
+    *saldo = 0.0;
+    com_preparar(ACC_VER_SALDO);
+    r = com_transaccion();
+    if (r < 0) {
+        return -1;
+    }
+    if (r != RESP_OK) {
+        return 1;
+    }
+    *saldo = atof(com_msg->datos);
+    return 0;
 }

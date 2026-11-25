@@ -98,7 +98,7 @@ static int elegir_usuario(const char *titulo, UsuLista *elegido)
         return 0;
     }
     for (i = 0; i < n; i++) {
-        snprintf(etiquetas[i], sizeof(etiquetas[i]), "%-20s %.60s",
+        snprintf(etiquetas[i], sizeof(etiquetas[i]), "%-20.20s %.60s",
                  lista[i].usuario, lista[i].correo);
     }
     sel = elegir_de_lista(titulo, "Elige un usuario", etiquetas, n);
@@ -123,7 +123,7 @@ static void ver_usuarios(void)
     snprintf(texto, sizeof(texto), "Usuarios registrados: %d\n\n%-22s %s\n%s\n",
              n, "Usuario", "Correo", "------------------------------------------------------");
     for (i = 0; i < n; i++) {
-        snprintf(fila, sizeof(fila), "%-22s %s\n", lista[i].usuario, lista[i].correo);
+        snprintf(fila, sizeof(fila), "%-22.22s %.63s\n", lista[i].usuario, lista[i].correo);
         if (strlen(texto) + strlen(fila) + 1 < sizeof(texto)) {
             strcat(texto, fila);
         }
@@ -198,7 +198,7 @@ static void modificar_usuario(void)
         };
 
         nueva[0] = confirma[0] = '\0';
-        snprintf(subtitulo, sizeof(subtitulo), "%s  (contrasena vacia = no cambiarla)", objetivo.usuario);
+        snprintf(subtitulo, sizeof(subtitulo), "%.20s  (contrasena vacia = no cambiarla)", objetivo.usuario);
         if (!ejecutar_formulario("MODIFICAR USUARIO", subtitulo, campos, 3,
                                  "Guardar", validar_modif_usuario, 0)) {
             return;
@@ -233,7 +233,7 @@ static void eliminar_usuario(void)
     if (r <= 0) {
         return;
     }
-    snprintf(pregunta, sizeof(pregunta), "Eliminar a \"%.30s\"?", objetivo.usuario);
+    snprintf(pregunta, sizeof(pregunta), "Eliminar a \"%.20s\"?", objetivo.usuario);
     erase();
     if (!confirmar(pregunta)) {
         return;

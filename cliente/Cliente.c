@@ -7,6 +7,7 @@
 #include "ipc_util.h"
 #include "menus.h"
 #include "playlists.h"
+#include "ui_compras.h"
 #include "ui_carrito.h"
 #include "ui_perfil.h"
 #include "sesion_ui.h"
@@ -39,81 +40,25 @@ static int leer_canciones(char *datos, CancionUI *lista, int max)
     return n;
 }
 
-/* Se ejecuta al presionar ENTER sobre una cancion de la biblioteca */
-static void agregar_a_playlist(const CancionUI *cancion)
-{
-    char nombres[MAX_PLAYLISTS_USR][LON_NOMBRE];
-    const char *punteros[MAX_PLAYLISTS_USR];
-    char *guardar = NULL;
-    char *linea;
-    int n = 0;
-    int r, elegida;
-
-    com_preparar(ACC_VER_PLAYLISTS);
-    r = com_transaccion();
-    if (r < 0) {
-        return;
-    }
-    if (r != RESP_OK) {
-        mostrar_aviso(com_msg->mensaje, PAR_ERROR);
-        return;
-    }
-
-    for (linea = strtok_r(com_msg->datos, "\n", &guardar);
-         linea != NULL && n < MAX_PLAYLISTS_USR;
-         linea = strtok_r(NULL, "\n", &guardar)) {
-
-        char *fin = strchr(linea, ';');
-
-        if (fin != NULL) {
-            *fin = '\0';
-        }
-        copiar_cadena(nombres[n], LON_NOMBRE, linea);
-        punteros[n] = nombres[n];
-        n++;
-    }
-
-    if (n == 0) {
-        mostrar_aviso("No tienes playlists. Crea una primero.", PAR_ERROR);
-        return;
-    }
-
-    elegida = menu_opciones("Agregar a playlist", cancion->titulo, punteros, n);
-    if (elegida < 0) {
-        return;
-    }
-
-    com_preparar(ACC_AGREGAR_A_PL);
-    copiar_cadena(com_msg->texto, sizeof(com_msg->texto), nombres[elegida]);
-    com_msg->arg = cancion->id;
-    r = com_transaccion();
-    if (r < 0) {
-        return;
-    }
-    mostrar_aviso(com_msg->mensaje, r == RESP_OK ? PAR_EXITO : PAR_ERROR);
-}
-
-/* ENTER sobre una cancion de la biblioteca: elegir que hacer con ella */
+/* ENTER sobre una cancion de la biblioteca: se agrega al carrito.
+ * (Para meterla en una playlist primero hay que comprarla: "Mis compras") */
 static void accion_cancion(const CancionUI *cancion)
 {
-    static const char *const opciones[] = {
-        "Agregar a una playlist",
-        "Agregar al carrito",
-        "Cancelar"
-    };
-    int eleccion = menu_opciones("Cancion", cancion->titulo, opciones, 3);
-
-    if (eleccion == 0) {
-        agregar_a_playlist(cancion);
-    } else if (eleccion == 1) {
-        agregar_al_carrito(cancion->id);
-    }
+    agregar_al_carrito(cancion->id);
 }
 
 static void abrir_biblioteca(void)
 {
     CancionUI catalogo[MAX_CANCIONES];
+    char info[200];
+    double saldo;
     int total, r;
+
+    r = com_saldo(&saldo);
+    if (r < 0) {
+        return;
+    }
+    snprintf(info, sizeof(info), "Saldo: $%.2f", saldo);
 
     com_preparar(ACC_VER_BIBLIOTECA);
     r = com_transaccion();
@@ -130,7 +75,7 @@ static void abrir_biblioteca(void)
         mostrar_aviso("La biblioteca esta vacia.", PAR_ERROR);
         return;
     }
-    pantalla_biblioteca(catalogo, total, accion_cancion);
+    pantalla_biblioteca(catalogo, total, accion_cancion, info);
 }
 
 /* ------------------------------------------------------------------ */
@@ -210,17 +155,23 @@ static void menu_principal(const char *usuario)
         "Biblioteca",
         "Playlists",
         "Carrito de compras",
+        "Mis compras",
         "Mi perfil",
         "Cerrar sesion"
     };
-    char subtitulo[LON_USUARIO + 16];
     int ultima = 0;
 
-    snprintf(subtitulo, sizeof(subtitulo), "Usuario: %s", usuario);
-
     while (!com_perdida()) {
-        int opcion = menu_opciones_desde("Menu principal", subtitulo, opciones, 5, ultima);
+        char subtitulo[300];
+        double saldo;
+        int opcion;
 
+        if (com_saldo(&saldo) < 0) {
+            return;
+        }
+        snprintf(subtitulo, sizeof(subtitulo), "Usuario: %.20s    Saldo: $%.2f", usuario, saldo);
+
+        opcion = menu_opciones_desde("Menu principal", subtitulo, opciones, 6, ultima);
         if (opcion >= 0) {
             ultima = opcion;
         }
@@ -235,8 +186,10 @@ static void menu_principal(const char *usuario)
         } else if (opcion == 2) {
             mostrar_carrito();
         } else if (opcion == 3) {
+            mostrar_compras();
+        } else if (opcion == 4) {
             mostrar_perfil();
-        } else if (opcion == 4 || opcion == -1) {
+        } else if (opcion == 5 || opcion == -1) {
             if (confirmar("Cerrar sesion?")) {
                 com_preparar(ACC_CERRAR_SESION);
                 com_transaccion();

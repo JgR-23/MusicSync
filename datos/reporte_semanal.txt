@@ -1,0 +1,38 @@
+===== REPORTE SEMANAL =====
+Periodo: 2026-11-19  a  2026-11-25
+Canciones vendidas: 31
+TOTAL VENDIDO: $415.48
+
+Fecha       Usuario         Cancion                       Precio
+---------------------------------------------------------------
+2026-11-23  jesus           Yesterday                     $   12.50
+2026-11-25  pedro           Breathe                       $   14.00
+2026-11-25  pedro           No Quarter                    $   15.00
+2026-11-25  pedro           In the End                    $   11.00
+2026-11-25  pedro           Bohemian Rhapsody             $   19.99
+2026-11-25  pedro           Yesterday                     $   12.50
+2026-11-25  pedro           Numb                          $   11.00
+2026-11-25  hugo            In the End                    $   11.00
+2026-11-25  hugo            Breathe                       $   14.00
+2026-11-25  hugo            Bohemian Rhapsody             $   19.99
+2026-11-25  hugo            Yesterday                     $   12.50
+2026-11-25  hugo            No Quarter                    $   15.00
+2026-11-25  hugo            Numb                          $   11.00
+2026-11-25  hugo            Stairway to Heaven            $   16.00
+2026-11-25  hugo            Hotel California              $   15.50
+2026-11-25  hugo            Smells Like Teen Spirit       $   13.00
+2026-11-25  hugo            Come As You Are               $   12.00
+2026-11-25  hugo            Sweet Child O' Mine           $   14.50
+2026-11-25  hugo            Back in Black                 $   13.50
+2026-11-25  hugo            Thunderstruck                 $   13.50
+2026-11-25  hugo            Enter Sandman                 $   14.00
+2026-11-25  hugo            Nothing Else Matters          $   14.50
+2026-11-25  hugo            Wonderwall                    $   12.00
+2026-11-25  hugo            Creep                         $   12.00
+2026-11-25  hugo            Karma Police                  $   12.50
+2026-11-25  hugo            Mr. Brightside                $   11.50
+2026-11-25  hugo            Seven Nation Army             $   11.50
+2026-11-25  hugo            Yellow                        $   11.50
+2026-11-25  hugo            Viva la Vida                  $   12.50
+2026-11-25  hugo            Billie Jean                   $   13.00
+2026-11-25  hugo            Thriller                      $   13.00
